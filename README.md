@@ -35,5 +35,16 @@ python3 server.py
 ```
 Download python here: https://www.python.org/
 
-# Donate
+* Go to https://ko-fi.com/manage/webhooks and enter your server IP/domain with /gets.
+
+Examples:
+```
+http://212.323.232.321:8080/gets
+```
+```
+http://212.323.232.211:7000/gets
+```
+* Press **Update** Button end have enjoy.
+
+# Donate:3
 https://money.yandex.ru/to/410015858804944/0
