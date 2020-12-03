@@ -23,8 +23,14 @@ Config examples:
 	"kofi_ip": ""
 }
 ```
-* Run server.py:
+
+* Install requirements(cmd/bash):
+```cmd
+python3 -m pip install -r requirements.txt
 ```
+
+* Run server.py(cmd/bash):
+```cmd
 python3 server.py
 ```
 Download here: https://www.python.org/
