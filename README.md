@@ -7,6 +7,7 @@ Server for KoFI Webhook API
 # How to Use
 
 * Edit config.json
+
 Config examples:
 ```json
 {
