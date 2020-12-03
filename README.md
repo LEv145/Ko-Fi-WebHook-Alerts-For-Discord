@@ -33,7 +33,8 @@ python3 -m pip install -r requirements.txt
 ```cmd
 python3 server.py
 ```
-||Download python here: https://www.python.org/||
+(Download python here: https://www.python.org/)
+
 
 * Go to https://ko-fi.com/manage/webhooks and enter your server IP/domain with /gets.
 
