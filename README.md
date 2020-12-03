@@ -1,7 +1,7 @@
 #### KoFI-Python-Webhook-API-Server
 Server for KoFI Webhook API
 
-![Иллюстрация к проекту](https://media.discordapp.net/attachments/675064990893604894/784084140723142686/unknown.png?width=286&height=361)
+![Иллюстрация к проекту](https://media.discordapp.net/attachments/675064990893604894/784100468560232488/unknown.png?width=263&height=361)
 
 
 # How to Use
