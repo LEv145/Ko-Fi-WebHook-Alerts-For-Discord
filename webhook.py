@@ -33,8 +33,8 @@ def webhook_send(json_):
 	# Embed
 	embed = DiscordEmbed(title = 'DONATE!', color = 0x4d1a9a)
 
-	embed.add_embed_field(value = f"{json_['from_name']}",                     name = "Donater", inline = False)
-	embed.add_embed_field(value = f"{json_['message']}",                       name = "Message", inline = False)
+	embed.add_embed_field(value = f"{json_['from_name'].replace('+', ' ')}",   name = "Donater", inline = False)
+	embed.add_embed_field(value = f"{json_['message'].replace('+', ' ')}",     name = "Message", inline = False)
 	embed.add_embed_field(value = f"{json_['amount']}$",                       name = "Amount of money", inline = False)
 	embed.add_embed_field(value = f"{json_['email']}",                         name = "Email", inline = False)
 	embed.add_embed_field(value = f"{json_['kofi_transaction_id']}",           name = "Transaction id", inline = False)
