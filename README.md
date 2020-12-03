@@ -45,7 +45,7 @@ http://212.323.232.321:8080/gets
 ```
 http://212.323.232.211:7000/gets
 ```
-* Press **Update** Button end have enjoy.
+* Press **Update** Button end have enjoy!
 
 # Donate:3
 https://money.yandex.ru/to/410015858804944/0
