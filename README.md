@@ -33,7 +33,7 @@ python3 -m pip install -r requirements.txt
 ```cmd
 python3 server.py
 ```
-Download here: https://www.python.org/
+Download python here: https://www.python.org/
 
 # Donate
 https://money.yandex.ru/to/410015858804944/0
