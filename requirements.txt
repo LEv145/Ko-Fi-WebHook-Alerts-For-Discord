@@ -1,2 +1,2 @@
 Flask
-discord-webhook
+discord.py
