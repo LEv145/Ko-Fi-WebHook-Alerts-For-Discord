@@ -47,6 +47,10 @@ http://212.323.232.211:7000/gets
 ```
 * Press **Update** Button end have enjoy!
 
+# Developers
+* 🎃LЕv145🎃#9261
+* Мalaia#8250
+
 # Donate:3
 > https://money.yandex.ru/to/410015858804944/0
 
