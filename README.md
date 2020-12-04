@@ -48,6 +48,6 @@ http://212.323.232.211:7000/gets
 * Press **Update** Button end have enjoy!
 
 # Donate:3
-https://money.yandex.ru/to/410015858804944/0
+> https://money.yandex.ru/to/410015858804944/0
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E0278RO)
