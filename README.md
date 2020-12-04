@@ -1,5 +1,5 @@
-#### KoFI-Python-Webhook-API-Server
-Server for KoFI Webhook API
+#### Ko-Fi WebHook Alerts Server
+Ko-Fi WebHook Alerts For Discord Guild's! 
 
 ![Иллюстрация к проекту](https://media.discordapp.net/attachments/749673439178260633/784316926284922890/unknown.png?width=274&height=250)
 
