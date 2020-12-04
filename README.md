@@ -1,7 +1,7 @@
 #### KoFI-Python-Webhook-API-Server
 Server for KoFI Webhook API
 
-![Иллюстрация к проекту](https://media.discordapp.net/attachments/675064990893604894/784100468560232488/unknown.png?width=263&height=361)
+![Иллюстрация к проекту](https://media.discordapp.net/attachments/749673439178260633/784316926284922890/unknown.png?width=274&height=250)
 
 
 # How to Use
@@ -49,4 +49,5 @@ http://212.323.232.211:7000/gets
 
 # Donate:3
 https://money.yandex.ru/to/410015858804944/0
+
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E0278RO)
