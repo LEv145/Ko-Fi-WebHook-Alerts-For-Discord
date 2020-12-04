@@ -49,3 +49,4 @@ http://212.323.232.211:7000/gets
 
 # Donate:3
 https://money.yandex.ru/to/410015858804944/0
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E0278RO)
