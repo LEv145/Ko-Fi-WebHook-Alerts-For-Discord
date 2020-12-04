@@ -1,10 +1,10 @@
 import json
-import discord
+from discord import Color
 from urllib.parse import unquote # Url Decoder
 from random import randint
 
 def random_color():
-    return discord.Color.from_rgb(randint(1, 255), randint(1, 255), randint(1, 255))
+    return Color.from_rgb(randint(1, 255), randint(1, 255), randint(1, 255))
 
 def get_json_data(config = "config.json") -> None:
 	# Open and json reading
