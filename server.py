@@ -8,7 +8,7 @@ DATA = get_json_data()
 KOFI_IP = DATA["kofi_ip"]
 PORT    = DATA["port"]
 if not(PORT): # Is empty
-	raise Exception("Port is empty")	
+	raise ValueError("Port is empty")	
 
 app = Flask(__name__)
 
@@ -17,8 +17,6 @@ def receive_update():
 	ip = request.remote_addr		
 
 	if KOFI_IP != "":
-		print(ip)
-		print(KOFI_IP)
 		if ip == KOFI_IP: # Checking for ip
 			json_ = get_json_decode(request.get_data())
 			webhook_send(json_)
@@ -31,4 +29,4 @@ def receive_update():
 	return "OK"
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=PORT)
+	app.run(host = '0.0.0.0', port = PORT)
