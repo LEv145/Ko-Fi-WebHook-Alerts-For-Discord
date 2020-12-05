@@ -1,6 +1,6 @@
 import discord
 import aiohttp
-from discord import Webhook, RequestsWebhookAdapter
+from discord import Webhook, AsyncWebhookAdapter
 from tools import get_json_data, random_color
 from tools import get_json_decode
 from datetime import datetime
@@ -38,9 +38,9 @@ async def webhook_send(json_):
                           timestamp = datetime.utcnow(),
                           color = random_color())
 
-	embed.add_embed_field(value = f"{json_['from_name'].replace('+', ' ')}",   name = "Donater", inline = False)
-	embed.add_embed_field(value = f"{json_['message'].replace('+', ' ')}",     name = "Message", inline = False)
-	embed.add_embed_field(value = f"{json_['amount']}$",                       name = "Amount of money", inline = False)
+	embed.add_field(value = f"{json_['from_name'].replace('+', ' ')}",   name = "Donater", inline = False)
+	embed.add_field(value = f"{json_['message'].replace('+', ' ')}",     name = "Message", inline = False)
+	embed.add_field(value = f"{json_['amount']}$",                       name = "Amount of money", inline = False)
 	#embed.add_embed_field(value = f"{json_['email']}",                         name = "Email", inline = False)
 	#embed.add_embed_field(value = f"{json_['kofi_transaction_id']}",           name = "Transaction id", inline = False)
 	#embed.add_embed_field(value = f"{json_['is_subscription_payment']}",       name = "Subscription payment", inline = False)
