@@ -21,11 +21,11 @@ async def receive_update(request):
 	if KOFI_IP != "":
 		if ip == KOFI_IP: # Checking for ip
 			json_ = get_json_decode(data)
-			webhook_send(json_)
+			await webhook_send(json_)
 	else: # If the parameter is empty
 		try:
 			json_ = get_json_decode(data)
-			webhook_send(json_)
+			await webhook_send(json_)
 		except Exception as e:
 			print(e)
 	return web.Response(text='OK')
