@@ -1,7 +1,7 @@
 import discord
 from discord import Webhook, RequestsWebhookAdapter
-from utils import get_json_data, random_color
-from utils import get_json_decode
+from tools import get_json_data, random_color
+from tools import get_json_decode
 from datetime import datetime
 
 DATA = get_json_data()
