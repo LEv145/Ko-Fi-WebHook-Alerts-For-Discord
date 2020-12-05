@@ -1,4 +1,5 @@
 import discord
+import aiohttp
 from discord import Webhook, RequestsWebhookAdapter
 from tools import get_json_data, random_color
 from tools import get_json_decode
@@ -27,12 +28,10 @@ if not(WEBHOOK_URL):
  'kofi_transaction_id': '1234-1234-1234-1234'}
 """
 
-def webhook_send(json_):
+async def webhook_send(json_):
 	# If public
 	if not(json_['is_public']):
 		return
-
-	webhook = Webhook.from_url(WEBHOOK_URL, adapter = RequestsWebhookAdapter())
 
 	# Embed
 	embed = discord.Embed(title = "Donate!",
@@ -49,4 +48,6 @@ def webhook_send(json_):
 
 	#embed.set_footer(text = f"{json_['timestamp'][:10]} • {json_['timestamp'][11:19]}")
 
-	webhook.send(embed = embed)
+	async with aiohttp.ClientSession() as session:
+        	webhook = Webhook.from_url(WEBHOOK_URL, adapter = AsyncWebhookAdapter(session))
+        	await webhook.send(embed = embed)
