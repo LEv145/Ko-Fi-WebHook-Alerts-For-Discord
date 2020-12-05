@@ -1,5 +1,5 @@
-import discord
 import aiohttp
+import discord
 from discord import Webhook, AsyncWebhookAdapter
 from tools import get_json_data, random_color
 from tools import get_json_decode
@@ -14,40 +14,40 @@ if not(WEBHOOK_URL):
 
 # Test Data
 """
-{'message_id': 'da75b014-117c-481c-a64f-e6086e407e26', 
- 'timestamp': '2020-12-03T12:36:20.5745667Z', 
- 'type': 'Donation', 
- 'is_public': True, 
- 'from_name': 'John+Smith', 
- 'message': 'Good+luck+with+the+integration!', 
- 'amount': '3.00', 
- 'url': 'https://ko-fi.com', 
- 'email': None, 'currency': None, 
- 'is_subscription_payment': False, 
- 'is_first_subscription_payment': False, 
+{'message_id': 'da75b014-117c-481c-a64f-e6086e407e26',
+ 'timestamp': '2020-12-03T12:36:20.5745667Z',
+ 'type': 'Donation',
+ 'is_public': True,
+ 'from_name': 'John+Smith',
+ 'message': 'Good+luck+with+the+integration!',
+ 'amount': '3.00',
+ 'url': 'https://ko-fi.com',
+ 'email': None, 'currency': None,
+ 'is_subscription_payment': False,
+ 'is_first_subscription_payment': False,
  'kofi_transaction_id': '1234-1234-1234-1234'}
 """
 
 async def webhook_send(json_):
-	# If public
-	if not(json_['is_public']):
-		return
+    # If public
+    if not(json_['is_public']):
+        return
 
-	# Embed
-	embed = discord.Embed(title = "Donate!",
+    # Embed
+    embed = discord.Embed(title = "Donate!",
                           timestamp = datetime.utcnow(),
                           color = random_color())
 
-	embed.add_field(value = f"{json_['from_name'].replace('+', ' ')}",   name = "Donater", inline = False)
-	embed.add_field(value = f"{json_['message'].replace('+', ' ')}",     name = "Message", inline = False)
-	embed.add_field(value = f"{json_['amount']}$",                       name = "Amount of money", inline = False)
-	#embed.add_embed_field(value = f"{json_['email']}",                         name = "Email", inline = False)
-	#embed.add_embed_field(value = f"{json_['kofi_transaction_id']}",           name = "Transaction id", inline = False)
-	#embed.add_embed_field(value = f"{json_['is_subscription_payment']}",       name = "Subscription payment", inline = False)
-	#embed.add_embed_field(value = f"{json_['is_first_subscription_payment']}", name = "First subscription payment", inline = False)
+    embed.add_field(value = f"{json_['from_name'].replace('+', ' ')}",   name = "Donater", inline = False)
+    embed.add_field(value = f"{json_['message'].replace('+', ' ')}",     name = "Message", inline = False)
+    embed.add_field(value = f"{json_['amount']}$",                       name = "Amount of money", inline = False)
+    #embed.add_embed_field(value = f"{json_['email']}",                         name = "Email", inline = False)
+    #embed.add_embed_field(value = f"{json_['kofi_transaction_id']}",           name = "Transaction id", inline = False)
+    #embed.add_embed_field(value = f"{json_['is_subscription_payment']}",       name = "Subscription payment", inline = False)
+    #embed.add_embed_field(value = f"{json_['is_first_subscription_payment']}", name = "First subscription payment", inline = False)
 
-	#embed.set_footer(text = f"{json_['timestamp'][:10]} • {json_['timestamp'][11:19]}")
+    #embed.set_footer(text = f"{json_['timestamp'][:10]} • {json_['timestamp'][11:19]}")
 
-	async with aiohttp.ClientSession() as session:
-        	webhook = Webhook.from_url(WEBHOOK_URL, adapter = AsyncWebhookAdapter(session))
-        	await webhook.send(embed = embed)
+    async with aiohttp.ClientSession() as session:
+            webhook = Webhook.from_url(WEBHOOK_URL, adapter = AsyncWebhookAdapter(session))
+            await webhook.send(embed = embed)
